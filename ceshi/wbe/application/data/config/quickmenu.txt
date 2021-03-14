@@ -1,0 +1,3 @@
+秘趣采集插件,/addons/collect/jsui.php
+模板菜单,/template/b/admin
+新导站长采集助手,/addons/xindaozhushou/index.php

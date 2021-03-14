@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>lvyongjian考试系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.75, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="files/public/css/bootstrap.css" />
+	<link rel="stylesheet/less" type="text/css" href="files/public/css/pe.less" />
+	<link rel="stylesheet" href="files/public/css/swiper.min.css">
+	<script src="files/public/js/less.min.js"></script>
+	<script src="files/public/js/jquery.min.js"></script>
+	<script src="files/public/js/swiper.min.js"></script>
+	<script src="files/public/js/bootstrap.min.js"></script>
+	<script src="files/public/js/bootstrap-datetimepicker.js"></script>
+	<script src="files/public/js/all.fine-uploader.min.js"></script>
+	<script src="files/public/js/ckeditor/ckeditor.js"></script>
+	<script src="files/public/js/ckeditor/js/MathJax.js?config=TeX-AMS_HTML"></script>
+	<!--
+	<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+	-->
+	<script src="files/public/js/pe.app.js"></script>
+	<script src="files/public/js/exam.app.js"></script>
+</head><body>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="pages">
+			<div class="header navbar-fixed-top">
+				<div class="nav">
+					<div class="col-xs-9">
+						<ul class="list-unstyled list-inline">
+							<li>
+								<h3 class="logo">Minecraft指令考试</h3>
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-3">
+						<ul class="list-unstyled list-inline">
+							<li>
+								<h3 class="logo"><span id="timer_h">00</span>：<span id="timer_m">00</span>：<span id="timer_s">00</span></h3>
+							</li>
+							<li class="pull-right">
+								<a href="javascript:;" onclick="javascript:$('#submodal').modal();" class="menu">
+									<span class="glyphicon glyphicon-print"></span> 交卷
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="content fixtop">
+				<div class="col-xs-3">
+					<div class="content-box padding" id="questionindex" data-spy="affix">
+                                                                                                                                                                        												<h3 class="title">
+                            一、单选题							<a class="badge pull-right resize"><em class="glyphicon glyphicon-resize-full"></em></a>
+						</h3>
+						<ul class="list-unstyled list-img">
+							<li id="qt_1">
+                                                                                                                                								<a id="sign_3432" href="#q_3432" class="btn btn-default qindex">1</a>
+                                                                                                								<a id="sign_3433" href="#q_3433" class="btn btn-default qindex">2</a>
+                                                                                                								<a id="sign_3434" href="#q_3434" class="btn btn-default qindex">3</a>
+                                                                                                								<a id="sign_3435" href="#q_3435" class="btn btn-default qindex">4</a>
+                                                                							</li>
+						</ul>
+                                                                                                                                                                                                                                                                                                                                                												<h3 class="title">
+                            二、定值填空							<a class="badge pull-right resize"><em class="glyphicon glyphicon-resize-full"></em></a>
+						</h3>
+						<ul class="list-unstyled list-img">
+							<li id="qt_4">
+                                                                                                                                								<a id="sign_3436" href="#q_3436" class="btn btn-default qindex">1</a>
+                                                                                                								<a id="sign_3437" href="#q_3437" class="btn btn-default qindex">2</a>
+                                                                                                								<a id="sign_3438" href="#q_3438" class="btn btn-default qindex">3</a>
+                                                                							</li>
+						</ul>
+                                                                                                                                                                                                                                                                                                                                                                        					</div>
+				</div>
+				<form class="col-xs-9 nopadding" id="paper" action="index.php?exam-app-exam-score">
+                                                                                                                                                                                                                            					<div class="content-box padding">
+						<h2 class="title">
+							<a id="q_3432"></a>
+							第 1 题 【 单选题 】
+							<a class="badge pull-right favor" data-questionid="3432">收藏</a>
+							<a class="badge pull-right" href="javascript:;" onclick="javascript:signQuestion('3432',this);">标记</a>
+							<input id="time_3432" type="hidden" name="time[3432]"/>
+						</h2>
+						<ul class="list-unstyled list-img">
+							<li class="border morepadding">
+								<div class="desc">
+									<p><p>1.下列关于指令的阐述，正确的是</p></p>
+								</div>
+							</li>
+                                                        							<li class="border morepadding">
+								<div class="desc">
+									<p><p>A.指令是玩家使用的指令，因此命令方块中不可使用<br />
+B./give @p command_block 1 0意思是给一个名为&quot;@p&quot;的玩家一个命令方块<br />
+C.由于@s表示玩家自己，所以在命令方块中不可出现@s<br />
+D.以上无正确选项</p></p>
+								</div>
+							</li>
+														<li class="border morepadding">
+								<div class="nopadding desc">
+                                                                                                            									<label class="inline"><input type="radio" name="question[3432]" rel="3432" value="A" /><span class="selector">A</span> </label>
+                                                                        									<label class="inline"><input type="radio" name="question[3432]" rel="3432" value="B" /><span class="selector">B</span> </label>
+                                                                        									<label class="inline"><input type="radio" name="question[3432]" rel="3432" value="C" /><span class="selector">C</span> </label>
+                                                                        									<label class="inline"><input type="radio" name="question[3432]" rel="3432" value="D" /><span class="selector">D</span> </label>
+                                                                                                                                                								</div>
+							</li>
+                            						</ul>
+					</div>
+                                                            					<div class="content-box padding">
+						<h2 class="title">
+							<a id="q_3433"></a>
+							第 2 题 【 单选题 】
+							<a class="badge pull-right favor" data-questionid="3433">收藏</a>
+							<a class="badge pull-right" href="javascript:;" onclick="javascript:signQuestion('3433',this);">标记</a>
+							<input id="time_3433" type="hidden" name="time[3433]"/>
+						</h2>
+						<ul class="list-unstyled list-img">
+							<li class="border morepadding">
+								<div class="desc">
+									<p><p>2.下列关于tp的基础描述，正确的是</p></p>
+								</div>
+							</li>
+                                                        							<li class="border morepadding">
+								<div class="desc">
+									<p><p>A./tp 3 2 5 由于无选择器则无法执行<br />
+B./tp @s 100 60 100 out of air 可能会因为tp至的地方非空气而无法执行<br />
+C.不管在什么版本中，/tp都可以用/teleport代替<br />
+D.与/tp作用相似的指令还有/spreadplayers</p></p>
+								</div>
+							</li>
+														<li class="border morepadding">
+								<div class="nopadding desc">
+                                                                                                            									<label class="inline"><input type="radio" name="question[3433]" rel="3433" value="A" /><span class="selector">A</span> </label>
+                                                                        									<label class="inline"><input type="radio" name="question[3433]" rel="3433" value="B" /><span class="selector">B</span> </label>
+                                                                        									<label class="inline"><input type="radio" name="question[3433]" rel="3433" value="C" /><span class="selector">C</span> </label>
+                                                                        									<label class="inline"><input type="radio" name="question[3433]" rel="3433" value="D" /><span class="selector">D</span> </label>
+                                                                                                                                                								</div>
+							</li>
+                            						</ul>
+					</div>
+                                                            					<div class="content-box padding">
+						<h2 class="title">
+							<a id="q_3434"></a>
+							第 3 题 【 单选题 】
+							<a class="badge pull-right favor" data-questionid="3434">收藏</a>
+							<a class="badge pull-right" href="javascript:;" onclick="javascript:signQuestion('3434',this);">标记</a>
+							<input id="time_3434" type="hidden" name="time[3434]"/>
+						</h2>
+						<ul class="list-unstyled list-img">
+							<li class="border morepadding">
+								<div class="desc">
+									<p><p>3.下列关于命令方块的描述，正确的是</p></p>
+								</div>
+							</li>
+                                                        							<li class="border morepadding">
+								<div class="desc">
+									<p><p>A.脉冲无条件红石控制的命令方块在接受到高频(10次/秒)红石信号后由于频率太高而只能执行一次<br />
+B.脉冲无条件保持开启的命令方块可以通过按钮来让他执行多次<br />
+C.链有条件保持开启的命令方块只有在上一个cb成功执行的情况下才会执行，且若该cb不执行则信号断开，后面的链的cb都不会执行<br />
+D.链无条件保持开启的命令方块不管指向哪边(除了与上一个cb相向)只要接受到信号都会执行</p></p>
+								</div>
+							</li>
+														<li class="border morepadding">
+								<div class="nopadding desc">
+                                                                                                            									<label class="inline"><input type="radio" name="question[3434]" rel="3434" value="A" /><span class="selector">A</span> </label>
+                                                                        									<label class="inline"><input type="radio" name="question[3434]" rel="3434" value="B" /><span class="selector">B</span> </label>
+                                                                        									<label class="inline"><input type="radio" name="question[3434]" rel="3434" value="C" /><span class="selector">C</span> </label>
+                                                                        									<label class="inline"><input type="radio" name="question[3434]" rel="3434" value="D" /><span class="selector">D</span> </label>
+                                                                                                                                                								</div>
+							</li>
+                            						</ul>
+					</div>
+                                                            					<div class="content-box padding">
+						<h2 class="title">
+							<a id="q_3435"></a>
+							第 4 题 【 单选题 】
+							<a class="badge pull-right favor" data-questionid="3435">收藏</a>
+							<a class="badge pull-right" href="javascript:;" onclick="javascript:signQuestion('3435',this);">标记</a>
+							<input id="time_3435" type="hidden" name="time[3435]"/>
+						</h2>
+						<ul class="list-unstyled list-img">
+							<li class="border morepadding">
+								<div class="desc">
+									<p><p>4.下列关于cb延迟的描述，正确的是</p></p>
+								</div>
+							</li>
+                                                        							<li class="border morepadding">
+								<div class="desc">
+									<p><p>A.指令单刻即游戏刻，单刻的延迟设定会影响到整体游戏刻<br />
+B.循环的命令方块每个单刻中间间隔为0.05秒，因此一个未设定延迟循环命令方块每秒能且只能执行20次<br />
+C.循环命令方块中如果延迟设定为15，则每秒执行15次<br />
+D.循环命令方块中如果延迟设定为20，则20秒执行一次</p></p>
+								</div>
+							</li>
+														<li class="border morepadding">
+								<div class="nopadding desc">
+                                                                                                            									<label class="inline"><input type="radio" name="question[3435]" rel="3435" value="A" /><span class="selector">A</span> </label>
+                                                                        									<label class="inline"><input type="radio" name="question[3435]" rel="3435" value="B" /><span class="selector">B</span> </label>
+                                                                        									<label class="inline"><input type="radio" name="question[3435]" rel="3435" value="C" /><span class="selector">C</span> </label>
+                                                                        									<label class="inline"><input type="radio" name="question[3435]" rel="3435" value="D" /><span class="selector">D</span> </label>
+                                                                                                                                                								</div>
+							</li>
+                            						</ul>
+					</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                					<div class="content-box padding">
+						<h2 class="title">
+							<a id="q_3436"></a>
+							第 1 题 【 定值填空 】
+							<a class="badge pull-right favor" data-questionid="3436">收藏</a>
+							<a class="badge pull-right" href="javascript:;" onclick="javascript:signQuestion('3436',this);">标记</a>
+							<input id="time_3436" type="hidden" name="time[3436]"/>
+						</h2>
+						<ul class="list-unstyled list-img">
+							<li class="border morepadding">
+								<div class="desc">
+									<p><p>5.有一个服主名为&quot;A&quot;想要开一个服务器，于是他先来了一个指令师&quot;B&quot;来帮忙做指令，以下是他们的计划(注:下列填空部分一律用小写字母作答，每作答完一道题用这个、符号隔开谢谢。):<br />
+计划一:出于对玩家的欢迎，所以每个第一次进服的新玩家都会收到进服欢迎，制作这套进服欢迎会用到2个指令，第一个是 /execute @a[()=进服] ~ ~ ~ say @s 欢迎进服！<br />
+第二个是 /() a @a [()=!()] () 进服</p></p>
+								</div>
+							</li>
+                                                        							<li class="border morepadding">
+								<div class="nopadding desc">
+                                    									<input type="text" name="question[3436]" placeholder="点击此处填写答案" value="" rel="3436"/>
+                                    								</div>
+							</li>
+                            						</ul>
+					</div>
+                                                            					<div class="content-box padding">
+						<h2 class="title">
+							<a id="q_3437"></a>
+							第 2 题 【 定值填空 】
+							<a class="badge pull-right favor" data-questionid="3437">收藏</a>
+							<a class="badge pull-right" href="javascript:;" onclick="javascript:signQuestion('3437',this);">标记</a>
+							<input id="time_3437" type="hidden" name="time[3437]"/>
+						</h2>
+						<ul class="list-unstyled list-img">
+							<li class="border morepadding">
+								<div class="desc">
+									<p><p>6.计划二:为了防止熊孩子开创造捣乱，此时指令师&quot;B&quot;在一个命令方块中输入了一条指令，这条指令是 /gamemode a @a[name=!(),name=!(),()=()]<br />
+计划三:服主想给服务器增加点趣味性，于是他想用计分板制作一个金币系统，此时指令师&quot;B&quot;输入了一条指令&quot;/scoreboard () add money ()&nbsp; ()()&quot;创建了一个名为&quot;金币&quot;的计分板，且字体有加粗。然后又输入了一条指令&quot;/scoreboard () () () money descending &quot;让该计分板上实体分数显示在了屏幕右侧。</p></p>
+								</div>
+							</li>
+                                                        							<li class="border morepadding">
+								<div class="nopadding desc">
+                                    									<input type="text" name="question[3437]" placeholder="点击此处填写答案" value="" rel="3437"/>
+                                    								</div>
+							</li>
+                            						</ul>
+					</div>
+                                                            					<div class="content-box padding">
+						<h2 class="title">
+							<a id="q_3438"></a>
+							第 3 题 【 定值填空 】
+							<a class="badge pull-right favor" data-questionid="3438">收藏</a>
+							<a class="badge pull-right" href="javascript:;" onclick="javascript:signQuestion('3438',this);">标记</a>
+							<input id="time_3438" type="hidden" name="time[3438]"/>
+						</h2>
+						<ul class="list-unstyled list-img">
+							<li class="border morepadding">
+								<div class="desc">
+									<p><p>7.计划三:服主想给服务器增加点趣味性，于是他想用计分板制作一个金币系统，此时指令师&quot;B&quot;输入了一条指令&quot;/scoreboard () add money ()&nbsp; ()()&quot;创建了一个名为&quot;金币&quot;的计分板，且字体有加粗。然后又输入了一条指令&quot;/scoreboard () () () money descending &quot;让该计分板上实体分数显示在了屏幕右侧。</p></p>
+								</div>
+							</li>
+                                                        							<li class="border morepadding">
+								<div class="nopadding desc">
+                                    									<input type="text" name="question[3438]" placeholder="点击此处填写答案" value="" rel="3438"/>
+                                    								</div>
+							</li>
+                            						</ul>
+					</div>
+                                                                                                                                                                                                                                                                                                                                                    					<input type="hidden" name="insertscore" value="1"/>
+					<input type="hidden" name="token" value="e20da8d04880df821e6ba28c00882957"/>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="submodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">交卷</h4>
+			</div>
+			<div class="modal-body">
+				<p>共有试题 <span class="allquestionnumber">50</span> 题，已做 <span class="yesdonumber">0</span> 题。您确认要交卷吗？</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="javascript:submitPaper();" class="btn btn-primary">确定交卷</button>
+				<button aria-hidden="true" class="btn" type="button" data-dismiss="modal">再检查一下</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+$(function(){
+	var clock = null;
+    $.get('index.php?exam-app-index-ajax-lefttime&rand'+Math.random(),function(data){
+		var setting = {
+                                    time:60,
+                        			hbox:$("#timer_h"),
+			mbox:$("#timer_m"),
+			sbox:$("#timer_s"),
+			finish:function(){
+				submitPaper();
+			}
+		}
+		setting.lefttime = parseInt(data);
+        clock = countdown(setting);
+	});
+	setInterval(saveanswer,579000);
+    setInterval(function(){
+        $.get('index.php?exam-app-index-ajax-lefttime&rand'+Math.random(),function(data){
+			clock(data);
+		});
+	},179000);
+});
+</script>
+<div class="modal fade" id="submodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">交卷</h4>
+            </div>
+            <div class="modal-body">
+                <p>共有试题 <span class="allquestionnumber">50</span> 题，已做 <span class="yesdonumber">0</span> 题。您确认要交卷吗？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="javascript:submitPaper();" class="btn btn-primary">确定交卷</button>
+                <button aria-hidden="true" class="btn" type="button" data-dismiss="modal">再检查一下</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="errormodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">错题举报</h4>
+            </div>
+            <div class="modal-body">
+                <form action="index.php?exam-app-lesson-reporterror" method="post" class="form-horizontal" id="reporterrorform">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">错误类型：</label>
+                            <div class="col-xs-9">
+                                <select class="form-control" name="args[fbtype]" needle="needle" msg="请选择错误类型">
+                                    <option value="答案错误">答案错误</option>
+                                    <option value="题干错误">题干错误</option>
+                                    <option value="知识点归类错误">知识点归类错误</option>
+                                    <option value="图片错误">图片错误</option>
+                                    <option value="解析错误">解析错误</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <textarea class="form-control" name="args[fbcontent]" rows="4" needle="needle" msg="请填写错误描述" placeholder="请填写错误描述"></textarea>
+                                <input type="hidden" name="reporterror" value="1">
+                                <input type="hidden" name="args[fbquestionid]" value="" id="fbquestionid">
+                                <input type="hidden" name="page" value="">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="javascript:$('#reporterrorform').submit();">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        try{
+            initData = $.parseJSON(storage.getItem('questions'));
+            if(!initData)initData = new Object();
+            for(k in initData){
+                var v = initData[k];
+                $('#time_'+k).val(v['time']);
+                $(":radio[rel="+k+"]").each(function(){
+                    var that = $(this);
+                    if(v['value'] == that.val()){
+                        that.attr("checked",true);
+                    }
+                });
+                $("#paper :text[rel="+k+"],#paper textarea[rel="+k+"]").each(function(){
+                    var that = $(this);
+                    that.val(v['value']);
+                    if(that.hasClass('jckeditor')){
+                        CKEDITOR.instances[that.attr('id')].setData(v['value']);
+                    }
+                });
+                $("#paper :checkbox[rel="+k+"]").each(function(){
+                    var that = $(this);
+                    if(v['value'].indexOf(that.val()) >= 0){
+                        that.attr("checked",true);
+                    }
+                });
+            }
+        }catch(e){
+            //
+        }finally {
+            markQuestions();
+        }
+        $('#paper :radio').on('click',function(){
+            var that = $(this);
+            setTimeout(function(){
+                var now = Date.parse(new Date())/1000;
+                $('#time_'+that.attr('rel')).val(now);
+                initData[that.attr('rel')] = {value:that.val(),time:now};
+                markQuestions();
+            },100);
+        });
+
+        $('#paper :checkbox').on('click',function(){
+            var that = $(this);
+            setTimeout(function(){
+                var now = Date.parse(new Date())/1000;
+                var answer = '';
+                $('#time_'+that.attr('rel')).val(now);
+                that.parents('li').find(':checked').each(function(){
+                    answer += $(this).val().toUpperCase();
+                });
+                initData[that.attr('rel')] = {value:answer,time:now};
+                markQuestions();
+            },100);
+        });
+
+        $('#paper :text,#paper textarea').on('blur',function(){
+            var that = $(this);
+            setTimeout(function(){
+                var now = Date.parse(new Date())/1000;
+                $('#time_'+that.attr('rel')).val(now);
+                initData[that.attr('rel')] = {value:that.val(),time:now};
+                markQuestions();
+            },100);
+        });
+
+        $('body').delegate('.favor.badge','click',function() {
+            favorquestion($(this).attr('data-questionid'));
+        });
+
+        $('body').delegate('.error.badge','click',function() {
+            $('#fbquestionid').val($(this).attr('data-questionid'));
+            $('#errormodal').modal();
+        });
+
+        $('body').delegate('#questionindex .resize','click',function(){
+            var that = $(this);
+            if(that.children('.glyphicon').hasClass('glyphicon-resize-full'))
+            {
+                $('#questionindex .resize .glyphicon').removeClass('glyphicon-resize-full').addClass('glyphicon glyphicon-resize-small');
+                $('#questionindex').css('width','1226px');
+            }
+            else
+            {
+                $('#questionindex .resize .glyphicon').removeClass('glyphicon-resize-small').addClass('glyphicon glyphicon-resize-full');
+                $('#questionindex').css('width','280px');
+            }
+        });
+
+        $('body').delegate('#questionindex .qindex','click',function(){
+            $('#questionindex .resize .glyphicon').removeClass('glyphicon-resize-small').addClass('glyphicon glyphicon-resize-full');
+            $('#questionindex').css('width','280px');
+        });
+
+        $('.allquestionnumber').html($('#questionindex .qindex').length);
+        $('.yesdonumber').html($('#questionindex .qindex.btn-primary').length);
+    });
+</script></body>
+</html>

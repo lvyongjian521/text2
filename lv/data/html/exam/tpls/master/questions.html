@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>lvyongjian考试系统后台管理</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="files/public/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="files/public/css/datetimepicker.css" />
+	<link rel="stylesheet" type="text/css" href="files/public/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="files/public/css/pe.master.css" />
+	<script src="files/public/js/jquery.min.js"></script>
+	<script src="files/public/js/jquery-ui.min.js"></script>
+	<script src="files/public/js/bootstrap.min.js"></script>
+	<script src="files/public/js/bootstrap-datetimepicker.js"></script>
+	<script src="files/public/js/all.fine-uploader.min.js"></script>
+	<script src="files/public/js/ckeditor/ckeditor.js"></script>
+	<script src="files/public/js/pe.master.js"></script>
+</head><body>
+<div class="container-fluid navbar" style="margin-top:0px;margin-bottom:0px;background-color:#337AB7;">	<div class="row-fluid">		<div class="main">			<div class="col-xs-12">				<ul class="list-unstyled list-inline">					<li>						<span class="logo">PHPEMS6.1</span>					</li>					<li class="menu">						<a href="index.php?core-master">全局</a>					</li>																				<li class="menu">						<a href="index.php?user-master">用户</a>					</li>																				<li class="menu active">						<a href="index.php?exam-master">考试</a>					</li>																				<li class="menu">						<a href="index.php?seminar-master">专题</a>					</li>																														<li class="menu">						<a href="index.php?document-master">文件</a>					</li>																				<li class="menu">						<a href="index.php?content-master">内容</a>					</li>																				<li class="menu">						<a href="index.php?bank-master">财务</a>					</li>																				<li class="menu">						<a href="index.php?course-master">课程</a>					</li>																				<li class="menu">						<a href="index.php?certificate-master">证书</a>					</li>																				<li class="menu">						<a href="index.php?docs-master">文档</a>					</li>																														<li class="pull-right">						<div class="btn-group" style="margin-top: 15px;">							<button type="button" class="btn btn-info"><em class="glyphicon glyphicon-user"></em> lvyongjian</button>							<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">								<span class="caret"></span>								<span class="sr-only">Toggle Dropdown</span>							</button>							<ul class="dropdown-menu">								<li><a href="index.php?user-center"><em class="glyphicon glyphicon-user"></em> 用户中心</a></li>                                                                <li><a href="index.php?core-master"><em class="glyphicon glyphicon-dashboard"></em> 后台管理</a></li>								<li><a class="ajax" href="index.php?user-app-logout"><em class="glyphicon glyphicon-log-out"></em> 退出</a></li>							</ul>						</div>					</li>				</ul>			</div>		</div>	</div></div><div class="container-fluid">
+	<div class="row-fluid">
+		<div class="main">
+			<div class="col-xs-2 leftmenu">
+				<style>.panel-heading a{color:#FFFFFF;text-decoration:none;}</style><div class="panel-group" id="panel-13465">	<div class="panel panel-primary">		<div class="panel-heading">			<a class="panel-toggle text-center" data-parent="#panel-13465" data-toggle="collapse" href="#panel-element-707348">				<em class="glyphicon glyphglyphicon glyphicon-th-large"></em> 考试设计			</a>		</div>		<div id="panel-element-707348" class="panel-collapse collapse" role="tabpanel">     		<ul class="list-group">				<li class="list-group-item"><a href="?exam-master-basic">考场列表</a></li>	    		<li class="list-group-item"><a href="?exam-master-basic-area">地区设置</a></li>	    		<li class="list-group-item"><a href="?exam-master-basic-subject">科目管理</a></li>	    		<li class="list-group-item"><a href="?exam-master-basic-questype">题型管理</a></li>			</ul>		</div>	</div>	<div class="panel panel-primary">		<div class="panel-heading">			<a class="panel-toggle text-center" data-parent="#panel-13465" data-toggle="collapse" href="#panel-element-2120761">				<em class="glyphicon glyphglyphicon glyphicon-user"></em> 课程开通			</a>		</div>		<div id="panel-element-2120761" class="panel-collapse collapse" role="tabpanel">     		<ul class="list-group">				<li class="list-group-item"><a href="index.php?exam-master-users">开通课程</a></li>				<li class="list-group-item"><a href="index.php?exam-master-users-batopen">批量开通</a></li>			</ul>		</div>	</div>	<div class="panel panel-primary">		<div class="panel-heading">			<a class="panel-toggle text-center" data-parent="#panel-13465" data-toggle="collapse" href="#panel-element-212076">				<em class="glyphicon glyphglyphicon glyphicon-text-color"></em> 试题管理			</a>		</div>		<div id="panel-element-212076" class="panel-collapse in collapse" role="tabpanel">     		<ul class="list-group">				<li class="list-group-item"><a href="index.php?exam-master-questions">普通试题管理</a></li>				<li class="list-group-item"><a href="index.php?exam-master-rowsquestions">题帽题管理</a></li>				<li class="list-group-item"><a href="index.php?exam-master-feedback">错题反馈</a></li>			</ul>		</div>	</div>	<div class="panel panel-primary">		<div class="panel-heading">			<a class="panel-toggle text-center" data-parent="#panel-13465" data-toggle="collapse" href="#panel-element-212096">				<em class="glyphicon glyphglyphicon glyphicon-duplicate"></em> 试卷管理			</a>		</div>		<div id="panel-element-212096" class="panel-collapse collapse" role="tabpanel">     		<ul class="list-group">				<li class="list-group-item"><a href="index.php?exam-master-exams">试卷列表</a></li>				<li class="list-group-item"><a href="index.php?exam-master-exams-autopage">随机组卷</a></li>				<li class="list-group-item"><a href="index.php?exam-master-exams-selfpage">手工组卷</a></li>				<li class="list-group-item"><a href="index.php?exam-master-exams-temppage">即时组卷</a></li>			</ul>		</div>	</div>	<div class="panel panel-primary">		<div class="panel-heading">			<a class="panel-toggle text-center" data-parent="#panel-13465" data-toggle="collapse" href="#panel-element-212090">				<em class="glyphicon glyphglyphicon glyphicon-trash"></em> 回收站			</a>		</div>		<div id="panel-element-212090" class="panel-collapse collapse" role="tabpanel">     		<ul class="list-group">				<li class="list-group-item"><a href="index.php?exam-master-recyle">普通试题</a></li>				<li class="list-group-item"><a href="index.php?exam-master-recyle-rows">题帽题</a></li>				<li class="list-group-item"><a href="index.php?exam-master-recyle-knows">知识点</a></li>			</ul>		</div>	</div>	<div class="panel panel-primary">		<div class="panel-heading">			<a class="panel-toggle text-center" data-parent="#panel-13465" data-toggle="collapse" href="#panel-element-2120901">				<em class="glyphicon glyphglyphicon glyphicon-wrench"></em> 批量工具			</a>		</div>		<div id="panel-element-2120901" class="panel-collapse collapse" role="tabpanel">     		<ul class="list-group">				<li class="list-group-item hide"><a href="index.php?exam-master-tools">删除试题</a></li>				<li class="list-group-item"><a href="index.php?exam-master-tools-clearhistory">清空考试记录</a></li>				<li class="list-group-item"><a href="index.php?exam-master-tools-clearsession">清理会话</a></li>			</ul>		</div>	</div></div>			</div>
+			<div id="datacontent">
+				<div class="box itembox" style="margin-bottom:0px;border-bottom:1px solid #CCCCCC;">
+					<div class="col-xs-12">
+						<ol class="breadcrumb">
+							<li><a href="index.php?exam-master">考试</a></li>
+							<li><a href="index.php?exam-master-questions">试题管理</a></li>
+							<li class="active">普通试题管理</li>
+						</ol>
+					</div>
+				</div>
+				<div class="box itembox" style="padding-top:10px;margin-bottom:0px;">
+					<h4 class="title" style="padding:10px;">
+						普通试题管理
+						<span class="pull-right">
+							<a data-toggle="dropdown" class="btn btn-primary" href="#">添加试题 <strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li><a href="index.php?exam-master-questions-addquestion&page=">单题添加</a></li>
+								<!--
+								<li><a href="index.php?exam-master-questions-bataddquestion&page=">批量添加</a></li>
+								-->
+								<li><a href="index.php?exam-master-questions-filebataddquestion&page=">CSV导入</a></li>
+							</ul>
+						</span>
+					</h4>
+					<form action="index.php?exam-master-questions" method="post" class="form-inline">
+						<table class="table">
+							<thead>
+				                <tr>
+							        <th colspan="2">搜索</th>
+							        <th></th>
+							        <th></th>
+							        <th></th>
+							        <th></th>
+				                </tr>
+				            </thead>
+							<tr>
+								<td>
+									试题ID：
+								</td>
+								<td>
+									<input name="search[questionid]" class="form-control" size="10" type="text" class="number" value=""/>
+								</td>
+								<td>
+									录入时间：
+								</td>
+								<td>
+									<input class="form-control datetimepicker" data-date="2021-02-18" data-date-format="yyyy-mm-dd" type="text" name="search[stime]" size="10" id="stime" value=""/> - <input class="form-control datetimepicker" data-date="2021-02-18" data-date-format="yyyy-mm-dd" size="10" type="text" name="search[etime]" id="etime" value=""/>
+								</td>
+								<td>
+									关键字：
+								</td>
+								<td>
+									<input class="form-control" name="search[keyword]" size="10" type="text" value=""/>
+								</td>
+							</tr>
+					        <tr>
+								<td>
+									科目：
+								</td>
+								<td>
+					        		<select name="search[questionsubjectid]" class="combox form-control" target="sectionselect" refUrl="?exam-master-questions-ajax-getsectionsbysubjectid&subjectid={value}">
+						        		<option value="0">选择科目</option>
+								  										  		<option value="1">演示课程</option>
+								  										  		<option value="2">Minecraft指令考试</option>
+								  									  		</select>
+					        	</td>
+					        	<td>
+									章节：
+								</td>
+								<td>
+							  		<select name="search[questionsectionid]" class="combox form-control" id="sectionselect" target="knowsselect" refUrl="?exam-master-questions-ajax-getknowsbysectionid&sectionid={value}">
+							  		<option value="0">选择章节</option>
+							  									  		</select>
+					        	</td>
+					        	<td>
+									知识点：
+								</td>
+								<td>
+							  		<select name="search[questionknowsid]" id="knowsselect" class="form-control">
+								  		<option value="">选择知识点</option>
+								  									  		</select>
+					        	</td>
+							</tr>
+							<tr>
+								<td>
+									录入人：
+								</td>
+					        	<td>
+					        		<input class="form-control" name="search[username]" size="10" type="text" value=""/>
+					        	</td>
+					        	<td>
+									试题类型：
+								</td>
+								<td>
+									<select name="search[questiontype]" class="form-control">
+								  		<option value="0">类型不限</option>
+								  										  		<option value="1">单选题</option>
+								  										  		<option value="2">多选题</option>
+								  										  		<option value="3">判断题</option>
+								  										  		<option value="4">定值填空</option>
+								  										  		<option value="5">填空题</option>
+								  										  		<option value="6">问答题</option>
+								  										  		<option value="7">论述题</option>
+								  									  		</select>
+								</td>
+								<td>
+									难度：
+								</td>
+								<td>
+									<select name="search[questionlevel]" class="form-control">
+								  		<option value="0">难度不限</option>
+										<option value="1">易</option>
+										<option value="2">中</option>
+										<option value="3">难</option>
+							  		</select>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<button class="btn btn-primary" type="submit">搜索</button>
+									<input type="hidden" value="1" name="search[argsmodel]" />
+								</td>
+								<td colspan="4"></td>
+							</tr>
+						</table>
+					</form>
+					<form action="index.php?exam-master-questions-batdel" method="post">
+						<fieldset>
+							<table class="table table-hover table-bordered">
+								<thead>
+									<tr class="info">
+					                    <th width="32"><input type="checkbox" class="checkall" target="delids"/></th>
+					                    <th width="40">ID</th>
+								        <th width="80">试题类型</th>
+								        <th>试题内容</th>
+										<th width="140">录入人/录入时间</th>
+										<th width="140">删除人/删除时间</th>
+								        <th width="48">难度</th>
+								        <th width="100">操作</th>
+					                </tr>
+					            </thead>
+					            <tbody>
+				                    							        <tr>
+										<td><input type="checkbox" name="delids[3440]" value="1"></td>
+										<td>
+											3440										</td>
+										<td>
+											问答题										</td>
+										<td>
+											<a title="查看试题" class="selfmodal" href="javascript:;" url="index.php?exam-master-questions-detail&questionid=3440" data-target="#modal">9.服主想让指令师帮忙做一个商店，由10个金币换1个苹果，所以指令师&quot;B&quot;制作了指令商店，请作...</a>
+										</td>
+										<td>
+                                            lvyongjian<br />2021-02-17										</td>
+										<td>
+                                            										</td>
+										<td>
+											中										</td>
+										<td>
+											<div class="btn-group">
+					                    		<a class="btn" href="index.php?exam-master-questions-modifyquestion&page=&questionid=3440" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
+												<a class="btn confirm" href="index.php?exam-master-questions-delquestion&questionparent=0&page=&questionid=3440" title="删除"><em class="glyphicon glyphicon-remove"></em></a>
+					                    	</div>
+										</td>
+							        </tr>
+							        							        <tr>
+										<td><input type="checkbox" name="delids[3439]" value="1"></td>
+										<td>
+											3439										</td>
+										<td>
+											问答题										</td>
+										<td>
+											<a title="查看试题" class="selfmodal" href="javascript:;" url="index.php?exam-master-questions-detail&questionid=3439" data-target="#modal">8.服务器开了后服主想制作点小游戏，于是指令师&quot;B&quot;制作了一个别踩白块系统，&rdquo;玩家&rdquo;...</a>
+										</td>
+										<td>
+                                            lvyongjian<br />2021-02-17										</td>
+										<td>
+                                            										</td>
+										<td>
+											中										</td>
+										<td>
+											<div class="btn-group">
+					                    		<a class="btn" href="index.php?exam-master-questions-modifyquestion&page=&questionid=3439" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
+												<a class="btn confirm" href="index.php?exam-master-questions-delquestion&questionparent=0&page=&questionid=3439" title="删除"><em class="glyphicon glyphicon-remove"></em></a>
+					                    	</div>
+										</td>
+							        </tr>
+							        							        <tr>
+										<td><input type="checkbox" name="delids[3438]" value="1"></td>
+										<td>
+											3438										</td>
+										<td>
+											定值填空										</td>
+										<td>
+											<a title="查看试题" class="selfmodal" href="javascript:;" url="index.php?exam-master-questions-detail&questionid=3438" data-target="#modal">7.计划三:服主想给服务器增加点趣味性，于是他想用计分板制作一个金币系统，此时指令师&quot;B&quot;...</a>
+										</td>
+										<td>
+                                            lvyongjian<br />2021-02-08										</td>
+										<td>
+                                            										</td>
+										<td>
+											中										</td>
+										<td>
+											<div class="btn-group">
+					                    		<a class="btn" href="index.php?exam-master-questions-modifyquestion&page=&questionid=3438" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
+												<a class="btn confirm" href="index.php?exam-master-questions-delquestion&questionparent=0&page=&questionid=3438" title="删除"><em class="glyphicon glyphicon-remove"></em></a>
+					                    	</div>
+										</td>
+							        </tr>
+							        							        <tr>
+										<td><input type="checkbox" name="delids[3437]" value="1"></td>
+										<td>
+											3437										</td>
+										<td>
+											定值填空										</td>
+										<td>
+											<a title="查看试题" class="selfmodal" href="javascript:;" url="index.php?exam-master-questions-detail&questionid=3437" data-target="#modal">6.计划二:为了防止熊孩子开创造捣乱，此时指令师&quot;B&quot;在一个命令方块中输入了一条指令，这条...</a>
+										</td>
+										<td>
+                                            lvyongjian<br />2021-02-08										</td>
+										<td>
+                                            										</td>
+										<td>
+											中										</td>
+										<td>
+											<div class="btn-group">
+					                    		<a class="btn" href="index.php?exam-master-questions-modifyquestion&page=&questionid=3437" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
+												<a class="btn confirm" href="index.php?exam-master-questions-delquestion&questionparent=0&page=&questionid=3437" title="删除"><em class="glyphicon glyphicon-remove"></em></a>
+					                    	</div>
+										</td>
+							        </tr>
+							        							        <tr>
+										<td><input type="checkbox" name="delids[3436]" value="1"></td>
+										<td>
+											3436										</td>
+										<td>
+											定值填空										</td>
+										<td>
+											<a title="查看试题" class="selfmodal" href="javascript:;" url="index.php?exam-master-questions-detail&questionid=3436" data-target="#modal">5.有一个服主名为&quot;A&quot;想要开一个服务器，于是他先来了一个指令师&quot;B&quot;来帮忙做指令，以...</a>
+										</td>
+										<td>
+                                            lvyongjian<br />2021-02-08										</td>
+										<td>
+                                            										</td>
+										<td>
+											中										</td>
+										<td>
+											<div class="btn-group">
+					                    		<a class="btn" href="index.php?exam-master-questions-modifyquestion&page=&questionid=3436" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
+												<a class="btn confirm" href="index.php?exam-master-questions-delquestion&questionparent=0&page=&questionid=3436" title="删除"><em class="glyphicon glyphicon-remove"></em></a>
+					                    	</div>
+										</td>
+							        </tr>
+							        							        <tr>
+										<td><input type="checkbox" name="delids[3435]" value="1"></td>
+										<td>
+											3435										</td>
+										<td>
+											单选题										</td>
+										<td>
+											<a title="查看试题" class="selfmodal" href="javascript:;" url="index.php?exam-master-questions-detail&questionid=3435" data-target="#modal">4.下列关于cb延迟的描述，正确的是</a>
+										</td>
+										<td>
+                                            lvyongjian<br />2021-02-08										</td>
+										<td>
+                                            										</td>
+										<td>
+											易										</td>
+										<td>
+											<div class="btn-group">
+					                    		<a class="btn" href="index.php?exam-master-questions-modifyquestion&page=&questionid=3435" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
+												<a class="btn confirm" href="index.php?exam-master-questions-delquestion&questionparent=0&page=&questionid=3435" title="删除"><em class="glyphicon glyphicon-remove"></em></a>
+					                    	</div>
+										</td>
+							        </tr>
+							        							        <tr>
+										<td><input type="checkbox" name="delids[3434]" value="1"></td>
+										<td>
+											3434										</td>
+										<td>
+											单选题										</td>
+										<td>
+											<a title="查看试题" class="selfmodal" href="javascript:;" url="index.php?exam-master-questions-detail&questionid=3434" data-target="#modal">3.下列关于命令方块的描述，正确的是</a>
+										</td>
+										<td>
+                                            lvyongjian<br />2021-02-08										</td>
+										<td>
+                                            										</td>
+										<td>
+											易										</td>
+										<td>
+											<div class="btn-group">
+					                    		<a class="btn" href="index.php?exam-master-questions-modifyquestion&page=&questionid=3434" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
+												<a class="btn confirm" href="index.php?exam-master-questions-delquestion&questionparent=0&page=&questionid=3434" title="删除"><em class="glyphicon glyphicon-remove"></em></a>
+					                    	</div>
+										</td>
+							        </tr>
+							        							        <tr>
+										<td><input type="checkbox" name="delids[3433]" value="1"></td>
+										<td>
+											3433										</td>
+										<td>
+											单选题										</td>
+										<td>
+											<a title="查看试题" class="selfmodal" href="javascript:;" url="index.php?exam-master-questions-detail&questionid=3433" data-target="#modal">2.下列关于tp的基础描述，正确的是</a>
+										</td>
+										<td>
+                                            lvyongjian<br />2021-02-08										</td>
+										<td>
+                                            										</td>
+										<td>
+											易										</td>
+										<td>
+											<div class="btn-group">
+					                    		<a class="btn" href="index.php?exam-master-questions-modifyquestion&page=&questionid=3433" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
+												<a class="btn confirm" href="index.php?exam-master-questions-delquestion&questionparent=0&page=&questionid=3433" title="删除"><em class="glyphicon glyphicon-remove"></em></a>
+					                    	</div>
+										</td>
+							        </tr>
+							        							        <tr>
+										<td><input type="checkbox" name="delids[3432]" value="1"></td>
+										<td>
+											3432										</td>
+										<td>
+											单选题										</td>
+										<td>
+											<a title="查看试题" class="selfmodal" href="javascript:;" url="index.php?exam-master-questions-detail&questionid=3432" data-target="#modal">1.下列关于指令的阐述，正确的是</a>
+										</td>
+										<td>
+                                            peadmin<br />2021-02-08										</td>
+										<td>
+                                            										</td>
+										<td>
+											易										</td>
+										<td>
+											<div class="btn-group">
+					                    		<a class="btn" href="index.php?exam-master-questions-modifyquestion&page=&questionid=3432" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
+												<a class="btn confirm" href="index.php?exam-master-questions-delquestion&questionparent=0&page=&questionid=3432" title="删除"><em class="glyphicon glyphicon-remove"></em></a>
+					                    	</div>
+										</td>
+							        </tr>
+							        							        <tr>
+										<td><input type="checkbox" name="delids[3431]" value="1"></td>
+										<td>
+											3431										</td>
+										<td>
+											定值填空										</td>
+										<td>
+											<a title="查看试题" class="selfmodal" href="javascript:;" url="index.php?exam-master-questions-detail&questionid=3431" data-target="#modal">滑膜关节的基本结构包括（）、（） 和（） 。</a>
+										</td>
+										<td>
+                                            peadmin<br />2020-08-25										</td>
+										<td>
+                                            										</td>
+										<td>
+											难										</td>
+										<td>
+											<div class="btn-group">
+					                    		<a class="btn" href="index.php?exam-master-questions-modifyquestion&page=&questionid=3431" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
+												<a class="btn confirm" href="index.php?exam-master-questions-delquestion&questionparent=0&page=&questionid=3431" title="删除"><em class="glyphicon glyphicon-remove"></em></a>
+					                    	</div>
+										</td>
+							        </tr>
+							        					        	</tbody>
+					        </table>
+					        <div class="form-group">
+					            <div class="col-sm-9">
+						            <label class="radio-inline">
+						                <input type="radio" name="action" value="delete" checked/>删除
+						            </label>
+						            						            <label class="radio-inline">
+						            	<button class="btn btn-primary" type="submit">提交</button>
+						            </label>
+						            <input type="hidden" name="page" value=""/>
+						        </div>
+					        </div>
+					        <ul class="pagination pull-right">
+					            <li class="col-2 text-center"><em class="iconfont icon-left-circle"></em></li><li class="col-6 text-center">1/344</a></li><li class="col-2 text-center"><a class="ajax" data-target="pagination" href="index.php?exam-master-questions&page=&page=2"><em class="iconfont icon-right-circle"></em></a></li>					        </ul>
+				        </fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="modal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button aria-hidden="true" class="close" type="button" data-dismiss="modal">×</button>
+				<h4 id="myModalLabel">
+					试题详情
+				</h4>
+			</div>
+			<div class="modal-body"></div>
+			<div class="modal-footer">
+				 <button aria-hidden="true" class="btn btn-primary" data-dismiss="modal">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid box" style="background-color:#337AB7;margin-bottom:0px;" id="footer">
+	<div class="row-fluid">
+		<div class="main itembox">
+			<div class="col-xs-12">
+				<ul class="list-unstyled">
+					<li class="text-center"><a href="">PHPEMS在线模拟考试系统 著作权登记号：2013 SR 113189</a></li>
+					<li class="text-center"><a href="">Copyright © phpems.net  2015-2016</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div></body>
+</html>

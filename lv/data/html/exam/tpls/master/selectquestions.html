@@ -1,0 +1,107 @@
+		    	<script type="text/javascript">
+		    	function selectall(obj,a,b){
+		    		$(".sbox").prop('checked', $(obj).is(':checked'));
+		    		$(".sbox").each(function(){
+		    			selectquestions(this,a,b);
+		    		});
+		    	}
+		    	</script>
+		    	<form action="index.php?exam-master-exams-selectquestions" method="post" direct="modal-body">
+					<table class="table form-inline">
+						<tr>
+							<td class="form-inline" colspan="2">
+								录入时间：
+								<input type="text" name="search[stime]" size="9"  class="form-control datetimepicker" data-date="2021-02-17" data-date-format="yyyy-mm-dd" id="stime" value=""/> - <input class="form-control datetimepicker" data-date="2021-02-17" data-date-format="yyyy-mm-dd" size="9" type="text" name="search[etime]" id="etime" value=""/>
+							</td>
+							<td>
+								关键字：
+								<input name="search[keyword]" class="form-control" size="8" type="text" value=""/>
+							</td>
+						</tr>
+						<tr>
+							<td class="form-inline">
+								<select name="search[questionisrows]" class="form-control">
+							  		<option value="0">普通试题</option>
+									<option value="1">题帽题</option>
+						  		</select>
+						  	</td>
+						  	<td>
+								<input type="hidden" name="search[questiontype]" value="4">
+								<input type="hidden" name="search[questionsubjectid]" value="2">
+				        		录入人：<input name="search[username]" class="form-control" size="5" type="text" value=""/>
+				        	</td>
+				        	<td>
+								难度：<select name="search[questionlevel]" class="combox form-control">
+							  		<option value="0">难度不限</option>
+									<option value="1">易</option>
+									<option value="2">中</option>
+									<option value="3">难</option>
+						  		</select>
+							</td>
+				        </tr>
+				        <tr>
+							<td>
+						  		知识点：<select name="search[questionsectionid]" class="combox form-control" id="sectionselect" target="knowsselect" refUrl="?exam-master-questions-ajax-getknowsbysectionid&sectionid={value}">
+							  		<option value="">选择章节</option>
+							  									  									  		<option value="2">Minecraft指令基础</option>
+							  									  								  		</select>
+						  	</td>
+						  	<td>
+						  		<select name="search[questionknowsid]" id="knowsselect" class="form-control">
+							  		<option value="">选择知识点</option>
+							  								  		</select>
+						  	</td>
+						  	<td>
+								<button class="btn btn-primary" type="submit">检索</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+				<div class="input"></div>
+								<table class="table table-hover table-bordered">
+					<thead>
+						<tr class="info">
+					        <th width="50"><input type="checkbox" onclick="javascript:selectall(this,'iselectquestions_4','ialreadyselectnumber_4');"/></th>
+					        <th width="100">试题类型</th>
+					        <th>试题内容</th>
+					        <th width="50">难度</th>
+						</tr>
+					</thead>
+					<tbody>
+										        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="3438" onclick="javascript:selectquestions(this,'iselectquestions_4','ialreadyselectnumber_4')"/></td>
+				          <td>定值填空</td>
+				          <td>
+						  	  <a href="javascript:;" title="7.计划三:服主想给服务器增加点趣味性，于是他想用计分板制作一个金币系统，此时指令师&quot;B&quot;输入了一条指令&quot;/scoreboard () add money ()&nbsp; ()()&quot;创建了一个名为&quot;金币&quot;的计分板，且字体有加粗。然后又输入了一条指令&quot;/scoreboard () () () money descending &quot;让该计分板上实体分数显示在了屏幕右侧。">7.计划三:服主想给服务器增加点趣味性，于是他想用计分板制作一个...</a>
+						  </td>
+						  <td>中</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="3437" onclick="javascript:selectquestions(this,'iselectquestions_4','ialreadyselectnumber_4')"/></td>
+				          <td>定值填空</td>
+				          <td>
+						  	  <a href="javascript:;" title="6.计划二:为了防止熊孩子开创造捣乱，此时指令师&quot;B&quot;在一个命令方块中输入了一条指令，这条指令是 /gamemode a @a[name=!(),name=!(),()=()]
+计划三:服主想给服务器增加点趣味性，于是他想用计分板制作一个金币系统，此时指令师&quot;B&quot;输入了一条指令&quot;/scoreboard () add money ()&nbsp; ()()&quot;创建了一个名为&quot;金币&quot;的计分板，且字体有加粗。然后又输入了一条指令&quot;/scoreboard () () () money descending &quot;让该计分板上实体分数显示在了屏幕右侧。">6.计划二:为了防止熊孩子开创造捣乱，此时指令师&quot;B&quot;在一个...</a>
+						  </td>
+						  <td>中</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="3436" onclick="javascript:selectquestions(this,'iselectquestions_4','ialreadyselectnumber_4')"/></td>
+				          <td>定值填空</td>
+				          <td>
+						  	  <a href="javascript:;" title="5.有一个服主名为&quot;A&quot;想要开一个服务器，于是他先来了一个指令师&quot;B&quot;来帮忙做指令，以下是他们的计划(注:下列填空部分一律用小写字母作答，每作答完一道题用这个、符号隔开谢谢。):
+计划一:出于对玩家的欢迎，所以每个第一次进服的新玩家都会收到进服欢迎，制作这套进服欢迎会用到2个指令，第一个是 /execute @a[()=进服] ~ ~ ~ say @s 欢迎进服！
+第二个是 /() a @a [()=!()] () 进服">5.有一个服主名为&quot;A&quot;想要开一个服务器，于是他先来了一个指...</a>
+						  </td>
+						  <td>中</td>
+				        </tr>
+				        					</tbody>
+				</table>
+				<ul class="pagination">
+	            			        </ul>
+		    	<script type="text/javascript">
+		    		jQuery(function($) {
+						markSelectedQuestions('ids[]','iselectquestions_4');
+		    		});
+		    	</script>
+				

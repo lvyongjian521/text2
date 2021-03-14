@@ -1,0 +1,1 @@
+if(!__lang){var __lang={};}__lang.crop_files_success="\u6587\u4ef6\u526a\u5207\u6210\u529f\uff01";__lang.file_copy_success="\u6587\u4ef6\u590d\u5236\u6210\u529f\uff01";__lang.regret_app="\u62b1\u6b49\uff0c\u5e94\u7528";__lang.already_close="\u5df2\u5173\u95ed";

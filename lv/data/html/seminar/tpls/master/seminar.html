@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PHPEMS模拟考试系统后台管理</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="files/public/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="files/public/css/datetimepicker.css" />
+	<link rel="stylesheet" type="text/css" href="files/public/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="files/public/css/pe.master.css" />
+	<script src="files/public/js/jquery.min.js"></script>
+	<script src="files/public/js/jquery-ui.min.js"></script>
+	<script src="files/public/js/bootstrap.min.js"></script>
+	<script src="files/public/js/bootstrap-datetimepicker.js"></script>
+	<script src="files/public/js/all.fine-uploader.min.js"></script>
+	<script src="files/public/js/ckeditor/ckeditor.js"></script>
+	<script src="files/public/js/pe.master.js"></script>
+	<script src="files/public/js/bootstrap-treeview.js"></script>
+</head><body>
+<div class="container-fluid navbar" style="margin-top:0px;margin-bottom:0px;background-color:#337AB7;">	<div class="row-fluid">		<div class="main">			<div class="col-xs-12">				<ul class="list-unstyled list-inline">					<li>						<span class="logo">PHPEMS6.1</span>					</li>					<li class="menu">						<a href="index.php?core-master">全局</a>					</li>																				<li class="menu">						<a href="index.php?user-master">用户</a>					</li>																				<li class="menu">						<a href="index.php?exam-master">考试</a>					</li>																				<li class="menu active">						<a href="index.php?seminar-master">专题</a>					</li>																														<li class="menu">						<a href="index.php?document-master">文件</a>					</li>																				<li class="menu">						<a href="index.php?content-master">内容</a>					</li>																				<li class="menu">						<a href="index.php?bank-master">财务</a>					</li>																				<li class="menu">						<a href="index.php?course-master">课程</a>					</li>																				<li class="menu">						<a href="index.php?certificate-master">证书</a>					</li>																				<li class="menu">						<a href="index.php?docs-master">文档</a>					</li>																														<li class="pull-right">						<div class="btn-group" style="margin-top: 15px;">							<button type="button" class="btn btn-info"><em class="glyphicon glyphicon-user"></em> peadmin</button>							<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">								<span class="caret"></span>								<span class="sr-only">Toggle Dropdown</span>							</button>							<ul class="dropdown-menu">								<li><a href="index.php?user-center"><em class="glyphicon glyphicon-user"></em> 用户中心</a></li>                                                                <li><a href="index.php?core-master"><em class="glyphicon glyphicon-dashboard"></em> 后台管理</a></li>								<li><a class="ajax" href="index.php?user-app-logout"><em class="glyphicon glyphicon-log-out"></em> 退出</a></li>							</ul>						</div>					</li>				</ul>			</div>		</div>	</div></div><div class="container-fluid">
+	<div class="row-fluid">
+		<div class="main">
+			<div class="col-xs-2 leftmenu">
+                <ul class="list-group">	<li class="list-group-item ">				<a href="index.php?seminar-master">首页</a>			</li>	<li class="list-group-item ">				<a href="index.php?seminar-master-category">分类管理</a>			</li>	<li class="list-group-item active">		专题管理			</li>	<li class="list-group-item ">        		<a href="index.php?seminar-master-tpls">模板管理</a>        	</li></ul>			</div>
+			<div class="col-xs-2 leftmenu">
+				<div id="catsmenu" style="margin-top: 0px;"></div>
+			</div>
+			<div id="datacontent">
+				<div class="box itembox" style="margin-bottom:0px;border-bottom:1px solid #CCCCCC;">
+					<div class="col-xs-12">
+						<ol class="breadcrumb">
+							<li><a href="index.php?seminar-master">专题</a></li>
+														<li class="active">专题管理</li>
+													</ol>
+					</div>
+				</div>
+				<div class="box itembox" style="padding-top:10px;margin-bottom:0px;overflow:visible">
+					<h4 class="title" style="padding:10px;">
+                        所有专题						<span class="pull-right">
+							<a class="btn btn-primary" href="index.php?seminar-master-seminar-add">添加专题</a>
+						</span>
+					</h4>
+					<form action="index.php?seminar-master-seminar" method="post" class="form-inline">
+						<table class="table">
+					        <tr>
+								<td style="border-top: 0px;">
+									专题ID：
+								</td>
+								<td style="border-top: 0px;">
+									<input name="search[seminarid]" class="form-control" size="15" type="text" class="number" value=""/>
+								</td>
+								<td style="border-top: 0px;">
+									录入时间：
+								</td>
+								<td style="border-top: 0px;">
+									<input class="form-control datetimepicker" data-date="2021-02-08" data-date-format="yyyy-mm-dd" type="text" name="search[stime]" size="10" id="stime" value=""/> - <input class="form-control datetimepicker" data-date="2021-02-08" data-date-format="yyyy-mm-dd" size="10" type="text" name="search[etime]" id="etime" value=""/>
+								</td>
+								<td style="border-top: 0px;">
+									标题关键字：
+								</td>
+								<td style="border-top: 0px;">
+									<input class="form-control" name="search[keyword]" size="15" type="text" value=""/>
+								</td>
+							</tr>
+					        <tr>
+								<td>
+									录入人：
+								</td>
+					        	<td>
+					        		<input class="form-control" name="search[username]" size="15" type="text" value=""/>
+					        	</td>
+					        	<td>
+									最后修改人：
+								</td>
+								<td>
+                                    <input class="form-control" name="search[modifier]" size="15" type="text" value=""/>
+								</td>
+								<td>
+									<button class="btn btn-primary" type="submit">提交</button>
+								</td>
+								<td></td>
+					        </tr>
+						</table>
+						<div class="input">
+                            <input type="hidden" value="" name="catid" />
+                            <input type="hidden" value="1" name="search[argsmodel]" />
+						</div>
+					</form>
+					<form action="index.php?seminar-master-seminar-lite" method="post">
+						<fieldset>
+							<table class="table table-hover table-bordered">
+								<thead>
+									<tr class="info">
+					                    <th width="36"><input type="checkbox" class="checkall" target="delids"/></th>
+					                    <th width="60">权重</th>
+					                    <th width="40">ID</th>
+					                    <th width="90">缩略图</th>
+								        <th>标题</th>
+								        <th width="120">分类</th>
+								        <th width="80">发布时间</th>
+										<th width="80">发布人</th>
+										<th width="80">修改时间</th>
+										<th width="80">修改人</th>
+								        <th width="180">操作</th>
+					                </tr>
+					            </thead>
+					            <tbody>
+														            	<tr>
+					                    <td><input type="checkbox" name="delids[1]" value="1"></td>
+					                    <td><input class="form-control" type="text" name="ids[1]" value="2" style="width:32px;padding:2px 5px;"/></td>
+					                    <td>1</td>
+					                    <td class="picture"><img src="files/attach/images/content/20190705/15623349496058.jpg" alt="" style="width:48px;"/></td>
+					                    <td>
+					                        测试专题					                    </td>
+					                    <td>
+					                    	<a href="index.php?seminar-master-seminars&catid=31" target=""></a>
+					                    </td>
+					                    <td>
+					                    	19-07-05					                    </td>
+										<td>
+                                            peadmin										</td>
+										<td>
+                                            19-10-15										</td>
+										<td>
+                                            peadmin										</td>
+					                    <td class="actions">
+					                    	<div class="btn-group">
+												<a class="btn" target="_blank" href="index.php?seminar-master-seminar-showcode&seminarid=1&page=1" title="预览"><em class="glyphicon glyphicon-search"></em></a>
+												<a class="btn" href="index.php?seminar-master-seminar-layout&seminarid=1&page=1" title="通栏"><em class="glyphicon glyphicon-cog"></em></a>
+												<a class="btn" href="index.php?seminar-master-seminar-modify&seminarid=1&page=1" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
+												<a class="btn confirm" href="index.php?seminar-master-seminar-del&seminarid=1&page=1" title="删除"><em class="glyphicon glyphicon-remove"></em></a>
+					                    	</div>
+					                    </td>
+					                </tr>
+					                					        	</tbody>
+					        </table>
+					        <div class="control-group">
+					            <div class="controls">
+						            <label class="radio-inline">
+						                <input type="radio" name="action" value="modify" checked/>排序
+						            </label>
+						            <label class="radio-inline">
+						                <input type="radio" name="action" value="moveposition" />推荐
+						            </label>
+						            <label class="radio-inline">
+						                <input type="radio" name="action" value="movecategory" />移动
+						            </label>
+						            <label class="radio-inline">
+						                <input type="radio" name="action" value="delete" />删除
+						            </label>
+						            						            <label class="radio-inline">
+						            	<button class="btn btn-primary" type="submit">提交</button>
+						            </label>
+						            <input type="hidden" name="submit" value="1"/>
+						            <input type="hidden" name="catid" value=""/>
+						            <input type="hidden" name="page" value="1"/>
+						        </div>
+					        </div>
+							<ul class="pagination pull-right">
+															</ul>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="index.php?seminar-master-seminar-catsmenu&catid="></script>
+<script>
+    $('#catsmenu').treeview({
+        levels: 1,
+        expandIcon: 'glyphicon glyphicon-chevron-right',
+        collapseIcon: 'glyphicon glyphicon-chevron-down',
+        selectedColor: "#000000",
+        selectedBackColor: "#FFFFFF",
+        enableLinks: true,
+        data: treeData
+    });
+</script>
+<div class="container-fluid box" style="background-color:#337AB7;margin-bottom:0px;" id="footer">
+	<div class="row-fluid">
+		<div class="main itembox">
+			<div class="col-xs-12">
+				<ul class="list-unstyled">
+					<li class="text-center"><a href="">PHPEMS在线模拟考试系统 著作权登记号：2013 SR 113189</a></li>
+					<li class="text-center"><a href="">Copyright © phpems.net  2015-2016</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div></body>
+</html>

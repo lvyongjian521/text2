@@ -1,0 +1,16 @@
+<?php
+$authcode='33bad4bfc343ab1f2b46a9dbd765a765';
+$distid='0';
+/**
+破解By资源之咖
+感谢QQ940415137提供源码！
+测试可用！！！
+晓姐姐qQ2137650183
+资源之咖689822221
+资源之咖二群328133953
+资源之咖三群328133953
+百晓APIapi.xcbxwl.com
+API说明api.xcbxwl.com/api_readme.php
+API开发文档api.xcbxwl.com/doc.php
+**/
+?>

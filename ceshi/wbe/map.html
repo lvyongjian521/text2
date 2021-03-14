@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>lvyongjian的小破站~</title>
+    <link rel="stylesheet" type="text/css" href="/template/b/css/home.css"/>
+<meta name="referrer" content="no-referrer" />
+
+<link rel="stylesheet" type="text/css" href="/template/b/css/style.css"/>
+<script type="text/javascript" src="/template/b/js/system.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+<script src="https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+<script>var maccms={"path":"","mid":"","url":"www.lvyongjian.gz01.bdysite.com","wapurl":"m.lvyongjian.gz01.bdysite.com","mob_status":"2"};</script>
+<style>
+.b-header-mask-wrp .b-header-mask-bg,#header .header{background-image: url(https://ae01.alicdn.com/kf/Udb13a4f4658c4db5ab31c76ed5f797b4U.png);}
+.header .logo,.partner-banner {background-image: url(/template/b/images/logo2.png)!important;}
+.z_top.b-header-blur.b-header-blur-black .z_top_nav ul li.home {background-position: -910px -74px;}
+.z_top.b-header-blur.b-header-blur-black .z_top_nav li a.i-link, .z_top.b-header-blur.b-header-blur-black .uns_box li.u-i a.i-link {color: #000;font-size: 12px;}
+/*#container{background: #fdfdfd;width: 100%;margin-bottom: 0px;background-image: url(../images/bg.jpg);background-repeat: no-repeat;background-position: center 130px;background-attachment: fixed;background-image: url(https://ws3.sinaimg.cn/large/005BYqpgly1fyvunulhgmj31hc0u075z.jpg);}*/
+.block-clearfix{-background-color: #fdfdfd;background-color: #f6f9fa;}
+.index{background-color: transparent !important;}
+div::-webkit-scrollbar{width: 2px;/*height: 4px;*/}
+div::-webkit-scrollbar-thumb{border-radius: 10px;-webkit-box-shadow: inset 0 0 5px #e2e2e2;background: #e2e2e2;}
+div::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 5px #fafafa;border-radius: 0;background: #fafafa;}
+html::-webkit-scrollbar{width: 4px;height: 4px;}
+html::-webkit-scrollbar-thumb{border-radius: 10px;-webkit-box-shadow: inset 0 0 5px #00a4db;background: #00a4db;}
+html::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 5px #ddd;border-radius: 10px;background: #ddd;}
+body {cursor: url(https://i.loli.net/2019/04/23/5cbedb2dae545.png), default;} a:hover{cursor:url(https://i.loli.net/2019/04/23/5cbedb246fd81.png), pointer;}
+#backTop{opacity: 1;filter: alpha(opacity=100);position: fixed;_position: absolute;z-index: 9999;bottom: 0;right: 0;display: none;height: 278px;width: 130px;background: url(/template/b/images/backtop.png) no-repeat;cursor: pointer;}
+</style>
+<script>
+            (function ($) {
+                var max_width = 1420;
+                var min_top = 300;
+                var layer_hidden = true;
+                var update_layer = function () {
+                    if (($(window).width() >= max_width) && ($(window).scrollTop() > min_top)) {
+//                        layer_hidden && $('#backTop').fadeIn(1000);
+                        layer_hidden && $('#backTop').show();
+                        layer_hidden = false;
+                    }
+                    else {
+//                        layer_hidden || $('#backTop').fadeOut(1000);
+                        layer_hidden || $('#backTop').hide();
+                        layer_hidden = true;
+                    }
+                };
+
+                $(window).resize(function () {
+                    update_layer();
+                });
+
+                $(window).scroll(function () {
+                    update_layer();
+                });
+
+                $(document).ready(function () {
+                    update_layer();
+
+                    $("#backTop,.back-top").click(function () {
+                        $("body,html").animate({scrollTop: 0}, 1000);
+                        return false;
+                    });
+                });
+            })(jQuery)
+
+</script>  
+
+</head>
+<body>
+<div id="header">
+<!-- 顶部菜单 -->
+    <div class="z_top b-header-blur b-header-blur-black">
+        <div class="container">
+            <div class="b-header-mask-wrp">
+                <div class="b-header-mask-bg"></div>
+                <div class="b-header-mask" style="background-color: hsla(0,0%,100%,0.13);"></div>
+            </div>
+            <div class="z_header">
+                <div class="z_top_nav">
+                    <ul>
+                        <li class="home" style=" background-position: -910px -74px;"><a class="i-link" href="/"><span>主站</span></a></li>
+                        <li class="b-gc"><a class="i-link" href="/index.php/user/login.html"  target="_blank" title="会员中心">会员中心</a></li>
+                        <li class="b-zb"><a class="i-link" rel="nofollow"  href="http://lvyongjian.gz01.bdysite.com"  target="_blank">二站</a></li><li class="b-zb"><a class="i-link" rel="nofollow"  href="http://lvyongjian.gz01.bdysite.com"  target="_blank">导航</a></li><li class="b-zb"><a class="i-link" rel="nofollow"  href="http://lvyongjian.gz01.bdysite.com"  target="_blank">测试</a></li>                        <li class="b-zb"><a class="i-link" rel="nofollow"  href="" title="app追剧更方便"><font color="#19c3ff"><i class="iconfont">&#xe711;</i>&nbsp;APP下载</font></a></li>
+                    </ul>
+                </div>
+                <div class="uns_box">
+                    <ul>
+                        <div class="logon_menu">                        <ul class="menu_nav">
+                            <li style="line-height: 42px;">
+                                <a href="javascript:void(0);" class="do_login icon_list mac_user" id="logon_info">
+                                    <img class="avatar" title="个人中心" src="/template/b//images/akari.jpg">
+                                </a>
+                            </li>
+                        </ul></div>
+                <li class="u-i" id="history">				<a href="/index.php/user/plays.html" class="i-link">历史</a>
+                    <div class="mini-wnd history-wnd" style="margin-top: 1px;border-radius: 5px;">
+                        <div class="top-login"style="padding-top: 10px;">
+                            <p class="txt">登录后有更多功能哦~</p><a class="loginbtn" href="/index.php/user/login.html">登录</a>
+                        </div>
+                        <ul class="listh history mac_history">
+                            <li class="timeline" style="width: 95%;"><span class="date">最近播放记录</span>
+                            </li>
+                            <div class="ilist"></div>
+                        </ul>
+                    </div>                </li>
+                <li class="u-i b-post"><a class="i-link" href="/index.php/gbook/index.html">留 言</a>
+                    <ul class="s-menu">
+                        <li><a href="/index.php/gbook/index.html"><i class="icon icon-vp"></i><em>求 片</em></a></li>
+                        <li><a href="/index.php/gbook/index.html"><i class="icon icon-vm"></i><em>建 议</em></a></li>
+                        <li><a href="/index.php/gbook/index.html"><i class="icon icon-vc"></i><em>漏 洞</em></a></li>
+                    </ul>
+                </li>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 导航菜单 -->
+<div class="header">
+    <div class="container">
+        <div class="header-layer" style="height: 170px;"></div>
+            <a class="header-link" href="/" style="height: 170px;"></a>
+        <div class="h-center"><a href="/" title="lvyongjian的小破站~" class="logo"></a></div>
+        <div class="num">
+            <div class="menu-wrapper">
+                <ul class="nav-menu" >
+                    <li class="m-i home"><a class="i-link" href="/"><em>首页</em></a></li>
+					                    <li class="m-i "><a class="i-link" href="/index.php/vod/type/id/1.html"><em>电影</em><div class="v-num"><span class="addnew_1">0</span></div></a>
+                    </li>                    <li class="m-i "><a class="i-link" href="/index.php/vod/type/id/20.html"><em>番剧</em><div class="v-num"><span class="addnew_20">0</span></div></a>
+                    </li>                    <li class="m-i "><a class="i-link" href="/index.php/vod/type/id/2.html"><em>连续剧</em><div class="v-num"><span class="addnew_2">0</span></div></a>
+                    </li>                    <li class="m-i "><a class="i-link" href="/index.php/vod/type/id/3.html"><em>综艺</em><div class="v-num"><span class="addnew_3">0</span></div></a>
+                    </li>                    <li class="m-i "><a class="i-link" href="/index.php/vod/type/id/4.html"><em>动漫</em><div class="v-num"><span class="addnew_4">0</span></div></a>
+                    </li>                    <li class="m-i "><a class="i-link" href="/index.php/art/type/id/5.html"><em>资讯</em><div class="v-num"><span class="addnew_5">0</span></div></a>
+                    </li>                     </li>  
+                       </li>  
+                      </li> 
+                     <li class="m-i m-i-zt m-i-ex"><a class="i-link" href="/index.php/gbook/index.html"><em>留言</em></a></li>
+                    <li class="m-i m-i-square m-i-ex"><a class="i-link" href="javascript:void(0)"><em>专栏</em></a>
+                        <div class="i_num">
+                            <ul>                                <li><a href="/index.php/art/type/id/5.html"><i class="icon icon-n-activity"></i><b>电影资讯</b></a></li>                                <li><a href="/index.php/topic/index.html"><i class="icon icon-n-gc"></i><b>影视专题</b></a></li><li><a href="/index.php/label/live.html"><i class="icon icon-n-new"></i><b>在线电视</b></a></li>
+                                <li><a href="/index.php/rss/baidu.xml"><i class="icon icon-n-h"></i><b>网站地图</b></a></li>
+                                <li><a href="javascript:;"><i class="icon icon-n-mango"></i><b>等待添加</b></a></li>
+                            </ul>
+                            <div class="square-pmt-field">
+                                <div class="square-pmt-item" title="活动">
+                                    <a href="/index.php/topic/index.html">
+                                        <img src="https://ae01.alicdn.com/kf/HTB1CLdsVzDpK1RjSZFrq6y78VXa0.jpg">
+                                    </a>
+                                </div>
+                                <div class="square-pmt-item" title="话题">
+                                    <a href="/index.php/topic/index.html">
+                                        <img src="https://ae01.alicdn.com/kf/HTB1ZRNwVrPpK1RjSZFFq6y5PpXag.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="m-i m-i-live m-i-last animate-bounce-up"><a class="i-link i-live" href="/index.php/label/live.html"><em>直播</em></a></li>
+                    
+                </ul>
+				<span class="sitenav-on"><i class="icon-list"></i></span>
+
+                <div class="menu-r">
+                    <a id="mobile_p" class="mobile-p" href="#" target="_blank">
+                        <div class="mobile-p-box">
+                            <div class="mobile-p-qrcode"></div>
+                        </div>
+                    </a>
+                    <a href="/vod/search/wd/魔法禁书.html" title="美琴" class="random-p">
+                        <img src="//i2.hdslb.com/bfs/active/0105560c89d1453d3f9653e92450e0d7a9738415.gif" alt="">
+                    </a>
+                </div>
+                <div class="search">
+                    <form action="/index.php/vod/search.html" onSubmit="return qrsearch();" id="searchform" method="post">
+                        <input id="wd" type="text" class="search-keyword wd mac_wd" id="search-keyword" autocomplete="off" name="wd" accesskey="s" onclick="chkblk(this)" value=""  " placeholder="输入关键词,请少字也别错字... " value=" ">
+                        <button id="button " type="submit " class="search-submit "  target="_blank " ></button>
+                    </form>
+					<a class="link-ranking " href="/index.php/label/rank.html "><span>排行榜</span></a>
+				</div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<style>
+#scroll-2{
+        width:200px;
+        height:200px;
+        overflow:auto;
+	margin-bottom: 20px;
+}
+#scroll-2 div{
+	width:400px;
+	height:400px;
+}
+#scroll-2::-webkit-scrollbar{
+	width:4px;
+	height:4px;
+}
+#scroll-2::-webkit-scrollbar-track{
+	background: #f6f6f6;
+	border-radius:2px;
+}
+#scroll-2::-webkit-scrollbar-thumb{
+	background: #aaa;
+	border-radius:2px;
+}
+#scroll-2::-webkit-scrollbar-thumb:hover{
+	background: #747474;
+}
+#scroll-2::-webkit-scrollbar-corner{
+	background: #f6f6f6;
+}
+</style>
+<!--当前位置-->
+<div class="bread-crumb-nav fn-clear">
+    <ul class="bread-crumbs">
+        <li class="home"><a href="index.html">首页</a></li>
+        <li>最近100个更新</li>
+        <li class="back"><a href="javascript:MAC.GoBack()">返回上一页</a></li>
+    </ul>
+</div>
+<!--列表部分-->
+<div class="ui-box ui-qire fn-clear" id="qire-lasted">
+    <div class="ui-title fn-clear">
+        <h2>最近100个更新</h2>
+        <div class="lasted-time fn-right">更新时间</div>
+        <div class="lasted-tags fn-right">标签</div>
+        <div class="lasted-type fn-right">类型</div>
+    </div>
+    <div class="ui-cnt">
+        <ul class="lasted-list fn-clear">
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/2.html">@张广阔，你要的番来啦~</a><em>/</em>第12集/共12集</h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/upload/vod/20210123-1/d62f5ab64a4e4145da19204ca6fb6ebe.png" alt="@张广阔，你要的番来啦~" /></div>
+                    <dl>
+                        <dt>@张广阔，你要的番来啦~</dt>
+                        <dd><label>主演：</label>不明</dd>
+                        <dd><label>剧情：</label>无…</dd>
+                        <dd class="bg">状态：第12集/共12集<br />更新时间：2021-01-23 15:36:46</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/20.html"></a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E6%97%A5%E6%9C%AC/id/20.html' target='_blank'>日本</a> </div>
+            <div class="lasted-time fn-right">2021-01-23</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/3.html">看这里~</a><em>/</em>第12集/共12集</h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/upload/vod/20210123-1/40b884cf8abf3dcb1847daee7f45b792.jpg" alt="看这里~" /></div>
+                    <dl>
+                        <dt>看这里~</dt>
+                        <dd><label>主演：</label>不明</dd>
+                        <dd><label>剧情：</label>无…</dd>
+                        <dd class="bg">状态：第12集/共12集<br />更新时间：2021-01-23 13:03:33</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/20.html"></a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E6%97%A5%E6%9C%AC/id/20.html' target='_blank'>日本</a> </div>
+            <div class="lasted-time fn-right">2021-01-23</div>
+            </li>
+                        </ul>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<div class="footer bili-footer report-wrap-module">
+<div id="footer"></div>
+	<div class="footer-wrp">
+		<div class="footer-cnt clearfix report-wrap-module">
+			<ul class="boston-postcards">
+				<li class="link">
+					<div class="tips">
+						lvyongjian的小破站~					</div>
+					<div class="cards">
+						<a target="_blank" href="#">
+							关于我们
+						</a>
+					</div>
+					<div class="cards">
+						<a target="_blank" href="/index.php/gbook/index.html">
+							联系我们
+						</a>
+					</div>
+					<div class="cards">
+						<a target="_blank" href="/index.php/gbook/index.html">
+							加入我们
+						</a>
+					</div>
+					<div class="cards">
+						<a target="_blank" href="/index.php/gbook/index.html">
+							求片留言
+						</a>
+					</div>
+					<div class="cards">
+						<a target="_blank" href="/index.php/rss/index.xml">
+							RSS订阅
+						</a>
+					</div>
+					<div class="cards">
+						<a target="_blank" href="#">
+							Investor Relations
+						</a>
+					</div>
+				</li>
+				<li class="links">
+					<div class="tips">
+						友情链接
+					</div>					<div class="cards">
+						<a target="_blank" href="#">
+							帮助中心
+						</a>
+					</div>
+					<div class="cards">
+						<a target="_blank" href="/index.php/gbook/index.html">
+							侵权申诉
+						</a>
+					</div>
+				
+				</li>
+				<li class="over">
+					<div class="block right">
+						<a href="/">
+							<div class="phone">
+								<div class="pic" id="footer-mobile-app">
+								</div>
+								<em style="bottom: -12px;">
+									客户端下载<br>(Android)
+								</em>
+								<div class="qrcode-box-wrp">
+									<div class="qrcode-box qrcode-app">
+										<div class="qrcode-box-arrow">
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a target="_blank" href="#">
+							<div class="weibo">
+								<div class="pic" id="footer-mobile-app">
+								</div>
+								<em>
+									新浪微博
+								</em>
+								<div class="qrcode-box-wrp">
+									<div class="qrcode-box qrcode-app">
+										<div class="qrcode-box-arrow">
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a id="weixin">
+							<div class="weixin">
+								<div class="pic">
+								</div>
+								<em>
+									官方微信
+								</em>
+								<div class="qrcode-box-wrp bigvip-qrcode">
+									<div class="qrcode-box qrcode-weixin">
+										<div class="qrcode-box-arrow">
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</li>
+			</ul>
+			<div class="partner">
+				<div class="block left" style="padding-top:14px;">
+					<div class="partner-banner">
+					</div>
+					<a id="jvs-cert" href="https://webcert.cnmstl.net/cert/grade?sn=d3ec53ae63a84350945198bab0251d59"
+					target="_blank" style="display: block; max-width: 132px;">
+						<div id="jvs-certifyOuter" class="jvs-certifyOuter" style="width: 100%; position: relative;">
+							<img id="certify-img1" class="                                                                                                                                                                                  "
+							crossorigin="anonymous" src="//backup.hdslb.com/bfs/mainfront/websafe.png"
+							style="position: absolute; left: 0px; top: 0px; display: block; width: 100%; height: auto; opacity: 1; max-height: none; border: none;">
+							<img id="certify-img2" class="                                                                                                                                                                                  act"
+							crossorigin="anonymous" src="//backup.hdslb.com/bfs/mainfront/confirm.png"
+							style="position: absolute; left: 0px; top: 0px; display: block; max-height: none; width: 100%; height: auto; opacity: 0; border: none;">
+						</div>
+					</a>
+				</div>
+				<div class="block left" style="margin: 0px 68px 0 115px;line-height:24px;float: none;">
+					<p>
+						互联网ICP备案：
+						<a href="#" target="_blank">
+							icp暂时未备案						</a>
+						| 侵权处理邮箱：<a class="yumi" href="mailto:3259905827@qq.com">3259905827@qq.com</a> | 违法不良信息举报电话：110 |3259905827_统计代码
+            <p>本站不提供任何视听上传储存服务，所有内容均来至网络自动采集，只提供web页面浏览服务，并不提供影片资源存储，也不参与任何视频录制、上传.</p>
+            <p>若本站收录的节目无意侵犯了贵司权利，请给我们来信，我们会及时处理和删除，谢谢！Copyright &#169; 2018-2020 <a class="yumi" href="www.lvyongjian.gz01.bdysite.com" target="_blank">lvyongjian的小破站~</a> </p>
+					<p>
+						<a href="http://report.12377.cn:13225/toreportinputNormal_anis.do" target="_blank">
+							网上有害信息举报专区：
+							<img src="//static.hdslb.com/images/12377.png" width="16" height="16"
+							style="vertical-align: sub;">
+							中国互联网违法和不良信息举报中心
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript" src="/template/b/js/appdown.js"></script>
+<script type="text/javascript" src="/template/b/js/jdyzm_pc.js"></script>
+<script type="text/javascript" src="/template/b/js/pace.min.js"></script>
+<div id="backTop"><a href="javascript:;"></a></div>
+</div></div>
+
+
+
+</body>
+</html>
