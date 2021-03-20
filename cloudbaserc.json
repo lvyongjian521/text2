@@ -1,43 +1,34 @@
 {
-  "version": "2.0",
-  "envId": "{{env.ENV_ID}}",
+  "envId": "codeless-0gnhewcwbbca2bba",
+  "functionRoot": "cloudfunctions",
   "framework": {
-    "name": "wordpress",
+    "name": "vue",
     "plugins": {
       "client": {
-        "use": "@cloudbase/framework-plugin-container",
+        "use": "@cloudbase/framework-plugin-website",
         "inputs": {
-          "serviceName": "wordpress",
-          "servicePath": "/",
-          "uploadType": "package",
-          "containerPort": 80,
-          "envVariables": {
-            "WORDPRESS_DB_HOST": "{{env.DB_IP}}:{{env.DB_PORT}}",
-            "WORDPRESS_DB_NAME": "wordpress"
-          },
-          "volumeMounts": {
-            "/var/www/html": "wordpress-cfs"
-          }
+          "buildCommand": "npm run build",
+          "outputPath": "dist",
+          "cloudPath": "/"
+        }
+      },
+      "server": {
+        "use": "@cloudbase/framework-plugin-function",
+        "inputs": {
+          "functionRootPath": "cloudfunctions",
+          "functions": [
+            {
+              "name": "vue-echo",
+              "config": {
+                "timeout": 5,
+                "envVariables": {},
+                "runtime": "Nodejs10.15",
+                "memorySize": 128
+              }
+            }
+          ]
         }
       }
-    },
-    "requirement": {
-      "addons": [
-        {
-          "type": "CFS",
-          "name": "wordpress-cfs"
-        },
-        {
-          "type": "CynosDB",
-          "name": "wordpress",
-          "envMap": {
-            "IP": "DB_IP",
-            "PORT": "DB_PORT",
-            "USERNAME": "WORDPRESS_DB_USER",
-            "PASSWORD": "WORDPRESS_DB_PASSWORD"
-          }
-        }
-      ]
     }
   }
 }
